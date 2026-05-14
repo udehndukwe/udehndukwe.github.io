@@ -38,10 +38,24 @@
         padding: 18px 0;
       }
       .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .brand-logo {
+        width: 58px;
+        height: auto;
+        display: block;
+      }
+      .brand-text {
+        display: grid;
+        line-height: 1.05;
+      }
+      .brand-text strong {
         font-size: 1.35rem;
         font-weight: 700;
       }
-      .brand span {
+      .brand-text span {
         color: #2563eb;
       }
       .nav {
@@ -247,7 +261,10 @@
   <body>
     <div class="page">
       <header>
-        <div class="brand">Reliable <span>Repairs</span></div>
+        <div class="brand">
+          <img class="brand-logo" src="logo.svg" alt="Reliable Repairs logo" />
+          <div class="brand-text"><strong>Reliable</strong><span>Repairs</span></div>
+        </div>
         <nav class="nav">
           <a href="index.html">Home</a>
           <a href="contact.html">Contact</a>

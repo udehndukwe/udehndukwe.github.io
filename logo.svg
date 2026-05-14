@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" fill="none">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+  </defs>
+  <rect x="6" y="6" width="68" height="68" rx="18" fill="#E0EFFD" />
+  <path d="M44 18c0-1.1-.9-2-2-2h-12c-1.1 0-2 .9-2 2v18h-6c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h6v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V42h6c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2h-6V18zm-2 20v-8h6v8h-6zm-14 0V20h10v18h-10z" fill="url(#grad)" />
+  <text x="90" y="45" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#111827">Reliable</text>
+  <text x="90" y="68" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#2563eb">Repairs</text>
+</svg>
