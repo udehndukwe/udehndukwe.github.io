@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern IT Support for Homes & Small Businesses | Reliable Repairs</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #111827;
+        background: #f8fafc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+      }
+      a {
+        color: #2563eb;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0;
+      }
+      .brand {
+        font-size: 1.35rem;
+        font-weight: 700;
+      }
+      .brand span {
+        color: #2563eb;
+      }
+      .nav {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .button, .button-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 14px 24px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+      }
+      .button {
+        background: #2563eb;
+        color: #ffffff;
+      }
+      .button:hover {
+        background: #1d4ed8;
+      }
+      .button-secondary {
+        background: rgba(37, 99, 235, 0.1);
+        color: #1e3a8a;
+      }
+      .hero {
+        display: grid;
+        gap: 32px;
+        padding: 48px 0 40px;
+      }
+      .hero h1 {
+        font-size: clamp(2.7rem, 4vw, 4.2rem);
+        margin: 0;
+        line-height: 1.05;
+      }
+      .hero p.lead {
+        font-size: 1.1rem;
+        max-width: 720px;
+        margin: 24px 0;
+        color: #475569;
+      }
+      .hero p.value {
+        max-width: 700px;
+        margin: 0;
+        color: #475569;
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .trust-strip {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin: 24px 0 40px;
+      }
+      .trust-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 18px;
+        padding: 20px 22px;
+        color: #0f172a;
+      }
+      .section {
+        padding: 40px 0;
+      }
+      .section h2 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+      }
+      .cards {
+        display: grid;
+        gap: 20px;
+      }
+      .service-card, .plan-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+      }
+      .service-card h3, .plan-card h3 {
+        margin-top: 0;
+        margin-bottom: 14px;
+      }
+      .service-card p, .plan-card p {
+        color: #475569;
+        margin-bottom: 16px;
+      }
+      .service-card ul, .plan-card ul {
+        padding-left: 20px;
+        margin: 0 0 20px;
+        color: #475569;
+      }
+      .service-card li, .plan-card li {
+        margin-bottom: 10px;
+      }
+      .section-grid {
+        display: grid;
+        gap: 20px;
+      }
+      .about-box {
+        display: grid;
+        gap: 18px;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 24px;
+        padding: 30px;
+      }
+      .steps {
+        display: grid;
+        gap: 16px;
+      }
+      .step {
+        display: grid;
+        gap: 8px;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 18px;
+        padding: 22px;
+      }
+      .step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 999px;
+        background: #2563eb;
+        color: white;
+        font-weight: 700;
+      }
+      .faq-item {
+        margin-bottom: 18px;
+      }
+      .faq-item strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+      .footer {
+        padding: 24px 0 12px;
+        border-top: 1px solid #e2e8f0;
+        display: grid;
+        gap: 10px;
+        color: #475569;
+        font-size: 0.95rem;
+      }
+      .footer a {
+        color: #2563eb;
+      }
+      .footer-grid {
+        display: grid;
+        gap: 18px;
+      }
+      .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .footer-links {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .hero, .trust-strip, .section {
+        width: 100%;
+      }
+      @media (min-width: 900px) {
+        .hero {
+          grid-template-columns: 1.2fr 0.8fr;
+          align-items: center;
+        }
+        .trust-strip {
+          gap: 18px;
+        }
+        .cards {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .plan-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .about-grid {
+          grid-template-columns: 1.1fr 0.9fr;
+        }
+      }
+      @media (max-width: 768px) {
+        .nav {
+          flex-wrap: wrap;
+          justify-content: flex-end;
+        }
+        .hero-actions {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="brand">Reliable <span>Repairs</span></div>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="contact.html">Contact</a>
+          <a class="button-secondary" href="contact.html">Book a Consultation</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div>
+          <p style="font-weight:700;color:#2563eb;text-transform:uppercase;letter-spacing:.12em;margin:0 0 16px;">One-Man IT Services Business</p>
+          <h1>Modern IT Support for Homes & Small Businesses</h1>
+          <p class="lead">Fast, reliable help with home tech, business IT systems, and Microsoft cloud environments — without the enterprise overhead or delays.</p>
+          <p class="value">From Wi-Fi issues and PC builds to Microsoft Intune and Microsoft Entra ID — I help you set up, secure, and manage your technology the right way.</p>
+          <div class="hero-actions">
+            <a class="button" href="contact.html">Book a Consultation</a>
+            <a class="button-secondary" href="contact.html">Get IT Help Now</a>
+          </div>
+        </div>
+        <div class="trust-strip" style="padding: 26px 0;">
+          <div class="trust-card">Fast remote support available</div>
+          <div class="trust-card">Home + business IT expertise</div>
+          <div class="trust-card">Microsoft cloud certified-style solutions (Intune, Entra, M365)</div>
+          <div class="trust-card">Security-first approach</div>
+          <div class="trust-card">One-on-one direct support (no call centers)</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Services Overview</h2>
+        <div class="cards">
+          <article class="service-card">
+            <h3>Personal IT Support</h3>
+            <p>Tech help for your home setup and devices.</p>
+            <ul>
+              <li>Home network setup & Wi-Fi troubleshooting</li>
+              <li>Custom PC builds and upgrades</li>
+              <li>Hardware & software troubleshooting</li>
+              <li>Printer, device, and smart home setup</li>
+              <li>Data backup guidance</li>
+            </ul>
+            <a class="button-secondary" href="contact.html">Get Home IT Help</a>
+          </article>
+          <article class="service-card">
+            <h3>Small Business IT Support</h3>
+            <p>Reliable IT systems that help your business run without downtime.</p>
+            <ul>
+              <li>Remote IT support and troubleshooting</li>
+              <li>Server setup & patch management</li>
+              <li>User account and access management</li>
+              <li>Endpoint management with Microsoft Intune</li>
+              <li>Identity management using Microsoft Entra ID</li>
+            </ul>
+            <a class="button-secondary" href="contact.html">Support My Business</a>
+          </article>
+          <article class="service-card">
+            <h3>Cloud & Microsoft 365 Services</h3>
+            <p>Modern workplace setup and optimization.</p>
+            <ul>
+              <li>Microsoft 365 setup and migration</li>
+              <li>Email and data migration</li>
+              <li>Teams & SharePoint configuration</li>
+              <li>Automation and workflow improvements</li>
+              <li>Cloud security configuration</li>
+            </ul>
+            <a class="button-secondary" href="contact.html">Modernize My Workplace</a>
+          </article>
+          <article class="service-card">
+            <h3>Security & Protection</h3>
+            <p>Keep your systems and data safe.</p>
+            <ul>
+              <li>Multi-factor authentication setup</li>
+              <li>Endpoint protection configuration</li>
+              <li>Account security audits</li>
+              <li>Phishing & spam protection setup</li>
+              <li>Basic cybersecurity consulting</li>
+            </ul>
+            <a class="button-secondary" href="contact.html">Secure My Systems</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" style="background:#ffffff;border-radius:28px;padding:40px 32px;box-shadow:0 20px 50px rgba(15, 23, 42, 0.06);">
+        <div class="about-grid">
+          <div>
+            <h2>Direct, Personal, Expert IT Support</h2>
+            <p>You’re not dealing with a call center or rotating technicians. You work directly with me — an IT specialist focused on modern endpoint management, cloud identity systems, and practical real-world troubleshooting.</p>
+            <p>I specialize in building secure, scalable IT environments using tools like Microsoft Intune, Entra ID, and Microsoft 365 — while still handling everyday technical issues for home users and small businesses.</p>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <strong>Request Help</strong>
+              <p>Submit an issue or consultation request.</p>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <strong>Quick Assessment</strong>
+              <p>I review your environment and identify the fastest solution.</p>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <strong>Fix / Implement</strong>
+              <p>Remote or onsite support depending on the issue.</p>
+            </div>
+            <div class="step">
+              <div class="step-number">4</div>
+              <strong>Optimize & Secure</strong>
+              <p>I don’t just fix problems — I improve your setup so they don’t come back.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Service Plans</h2>
+        <div class="plan-grid cards">
+          <article class="plan-card">
+            <h3>Basic Support</h3>
+            <p>For home users</p>
+            <ul>
+              <li>Hourly troubleshooting</li>
+              <li>PC and network fixes</li>
+            </ul>
+          </article>
+          <article class="plan-card">
+            <h3>Business Essentials</h3>
+            <p>For small businesses</p>
+            <ul>
+              <li>Remote IT support</li>
+              <li>User management</li>
+              <li>Basic endpoint support</li>
+            </ul>
+          </article>
+          <article class="plan-card">
+            <h3>Modern Workplace Plan</h3>
+            <p>For growing businesses</p>
+            <ul>
+              <li>Microsoft Intune management</li>
+              <li>Microsoft Entra ID administration</li>
+              <li>Security baseline enforcement</li>
+              <li>Ongoing IT support</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" style="background:#ffffff;border-radius:28px;padding:36px 32px;box-shadow:0 20px 50px rgba(15, 23, 42, 0.04);">
+        <h2>Testimonials</h2>
+        <div class="cards">
+          <div class="service-card">
+            <p>“Fast, clear, and fixed our network issues in one session.”</p>
+            <p style="font-weight:700;margin-top:14px;">— Small Business Client</p>
+          </div>
+          <div class="service-card">
+            <p>“Helped us migrate everything to Microsoft 365 without downtime.”</p>
+            <p style="font-weight:700;margin-top:14px;">— Office Manager</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+          <strong>Do you offer remote support?</strong>
+          <p>Yes — most issues can be resolved remotely.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Do you work with small businesses?</strong>
+          <p>Yes — that is a core focus area.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Can you help set up new devices or offices?</strong>
+          <p>Yes — from setup to full IT environments.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Do you offer ongoing IT support?</strong>
+          <p>Yes — monthly support plans are available.</p>
+        </div>
+      </section>
+
+      <section class="section" style="background:#2563eb;color:#ffffff;border-radius:28px;padding:42px 32px;">
+        <h2>Ready to Fix or Upgrade Your IT Setup?</h2>
+        <p style="max-width:780px;">Whether it’s your home network or your business infrastructure, I can help you build something reliable, secure, and easy to manage.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:24px;">
+          <a class="button" href="contact.html">Book a Consultation</a>
+          <a class="button-secondary" href="contact.html" style="background:rgba(255,255,255,0.18);color:#ffffff;">Contact Me</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-row">
+          <div>Contact: <a href="mailto:udehndukwe@gmail.com">udehndukwe@gmail.com</a></div>
+          <div class="footer-links">
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="footer-row">
+          <div>Service Areas: Ohio / Remote US</div>
+          <div>© 2026 Reliable Repairs</div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

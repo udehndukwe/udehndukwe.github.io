@@ -5,24 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | Reliable Repairs</title>
     <style>
+      :root {
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #0f172a;
+        background: #f8fafc;
+      }
+      * {
+        box-sizing: border-box;
+      }
       body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
         margin: 0;
-        padding: 20px;
-        color: #1f2937;
-        background: #f9fafb;
-      }
-      .container {
-        max-width: 760px;
-        margin: 0 auto;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        padding: 30px;
-      }
-      h1, h2 {
-        color: #111827;
+        background: #f8fafc;
       }
       a {
         color: #2563eb;
@@ -31,65 +24,175 @@
       a:hover {
         text-decoration: underline;
       }
-      label {
-        font-weight: bold;
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 24px;
       }
-      input, textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #d1d5db;
-        border-radius: 6px;
-        margin-top: 6px;
-        box-sizing: border-box;
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 24px;
       }
-      button {
-        background-color: #2563eb;
-        color: white;
+      .brand {
+        font-size: 1.35rem;
+        font-weight: 700;
+      }
+      .brand span {
+        color: #2563eb;
+      }
+      .nav {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         padding: 12px 20px;
+        border-radius: 999px;
+        font-weight: 600;
+        background: #2563eb;
+        color: white;
         border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: bold;
       }
-      button:hover {
-        background-color: #1d4ed8;
+      .button:hover {
+        background: #1d4ed8;
       }
-      .form-group {
-        margin-bottom: 18px;
+      .hero {
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 28px;
+        padding: 32px;
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
       }
-      .back-link {
+      .hero h1 {
+        margin-top: 0;
+        font-size: clamp(2rem, 3.5vw, 3.2rem);
+        line-height: 1.05;
+      }
+      .hero p {
+        color: #475569;
+        max-width: 760px;
+      }
+      .content {
+        margin-top: 32px;
+        display: grid;
+        gap: 24px;
+      }
+      .content h2 {
+        margin-bottom: 14px;
+        font-size: 1.8rem;
+      }
+      .card {
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 24px;
+        padding: 28px;
+      }
+      .card h3 {
+        margin-top: 0;
+      }
+      .card ul {
+        padding-left: 20px;
+        margin: 0 0 18px;
+        color: #475569;
+      }
+      .card li {
+        margin-bottom: 10px;
+      }
+      .card a {
         display: inline-block;
-        margin-top: 20px;
+        margin-top: 10px;
+      }
+      .grid-2 {
+        display: grid;
+        gap: 20px;
+      }
+      .grid-3 {
+        display: grid;
+        gap: 20px;
+      }
+      .faq-item {
+        margin-bottom: 20px;
+      }
+      .faq-item strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+      .footer {
+        margin-top: 40px;
+        padding-top: 26px;
+        border-top: 1px solid #e2e8f0;
+        color: #475569;
+        font-size: 0.95rem;
+      }
+      .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: space-between;
+      }
+      @media (min-width: 900px) {
+        .grid-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .grid-3 {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Contact Us</h1>
-      <h2>Get in Touch</h2>
-      <p>We'd love to hear from you! Reach out with any questions about our IT services or endpoint management solutions.</p>
-      <hr />
-      <h2>Contact Information</h2>
-      <p><strong>Phone:</strong> <a href="tel:216-352-9317">216-352-9317</a><br />
-      <strong>Email:</strong> <a href="mailto:udehndukwe@gmail.com">udehndukwe@gmail.com</a></p>
-      <hr />
-      <h2>Send us a Message</h2>
-      <form action="https://formspree.io/f/xyzpqwer" method="POST">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+    <div class="page">
+      <header>
+        <div class="brand">Reliable <span>Repairs</span></div>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a class="button" href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <h1>Contact Reliable Repairs</h1>
+        <p>Ready to solve your home or business IT challenge? Reach out for a consultation, remote support, or cloud migration help.</p>
+        <div class="content">
+          <div class="card">
+            <h2>Contact Information</h2>
+            <p><strong>Phone:</strong> <a href="tel:216-352-9317">216-352-9317</a></p>
+            <p><strong>Email:</strong> <a href="mailto:udehndukwe@gmail.com">udehndukwe@gmail.com</a></p>
+          </div>
+          <div class="card">
+            <h2>Send a Message</h2>
+            <form action="https://formspree.io/f/xyzpqwer" method="POST">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required style="width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;margin:10px 0 16px;" />
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required style="width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;margin:10px 0 16px;" />
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required style="width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;margin:10px 0 16px;"></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+      </section>
+
+      <section class="content">
+        <div class="card">
+          <h2>Need help fast?</h2>
+          <p>Book a consultation or send a request now — whether it’s a home-network issue, business IT system, or Microsoft cloud migration.</p>
+          <a class="button" href="contact.html">Book a Consultation</a>
         </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-row">
+          <div>Service Areas: Ohio / Remote US</div>
+          <div>© 2026 Reliable Repairs</div>
         </div>
-        <button type="submit">Send Message</button>
-      </form>
-      <p class="back-link"><a href="index.html">← Back to Home</a></p>
+      </footer>
     </div>
   </body>
 </html>
